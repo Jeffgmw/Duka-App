@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.BottomSheetFragment"
+    android:background="@color/card_background"
+    android:paddingTop="24dp"
+    android:paddingBottom="24dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/add_to"
+        android:textSize="20sp"
+        android:textColor="@color/text"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/text"
+        android:alpha="0.1"
+        android:layout_marginTop="8dp"
+
+        app:layout_constraintTop_toBottomOf="@id/label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chip_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:singleSelection="true"
+
+        app:layout_constraintTop_toBottomOf="@id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/remove_button">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/reading_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconStartPadding="8dp"
+            app:chipIconSize="16dp"
+            android:textColor="@drawable/chip_states"
+            style="@style/Custom.Chip"
+            android:text="@string/reading"
+
+            tools:checked="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/completed_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconStartPadding="8dp"
+            app:chipIconSize="16dp"
+            android:textColor="@drawable/chip_states"
+            style="@style/Custom.Chip"
+            android:text="@string/completed" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <Button
+        android:id="@+id/remove_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:text="@string/remove"
+        android:textAllCaps="false"
+        android:textColor="@color/red"
+
+        app:layout_constraintTop_toTopOf="@id/chip_group"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/done_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/done"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/orange"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+
+        app:layout_constraintTop_toBottomOf="@id/chip_group"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

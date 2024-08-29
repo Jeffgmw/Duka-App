@@ -1,3 +1,43 @@
 <resources>
-    <string name="app_name">SomaLearn</string>
+    <string name="app_name">Books</string>
+
+    <!-- bottom nav -->
+    <string name="action_home_title">Home</string>
+    <string name="action_search_title">Explore</string>
+
+    <!-- fragment search -->
+    <string name="searchView_query_hint">Search</string>
+    <string name="ship_image_description">Container ship image</string>
+    <string name="search_hint">You can search by a book title, author, genre, etc …</string>
+    <string name="error_title">Something went wrong</string>
+
+    <string name="book_cover">Book cover</string>
+
+    <!-- fragment details -->
+    <string name="blurred_cover_description">Blurred book cover</string>
+    <string name="rating">Rating</string>
+    <string name="price">Price</string>
+    <string name="status">Status</string>
+    <string name="fab_description">Change book status</string>
+    <string name="genre">Genre</string>
+    <string name="released">Released</string>
+    <string name="size">Size</string>
+
+    <!-- bottom sheet -->
+    <string name="add_to">Add to</string>
+    <string name="remove">Remove</string>
+    <string name="done">Done</string>
+    <string name="error_image_description">Error image</string>
+
+    <!-- fragment books -->
+    <string name="go_back_arrow">Go back arrow</string>
+    <string name="empty_list">Oops !\nIt\'s empty</string>
+    <string name="offline">No connection</string>
+
+    <string name="none">None</string>
+    <string name="completed">Completed</string>
+    <string name="reading">Reading</string>
+    <string name="unknown">Unknown</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

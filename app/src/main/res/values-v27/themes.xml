@@ -4,6 +4,9 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:colorEdgeEffect">@color/colorEdgeEffect</item>
 
+        <item name="android:navigationBarColor">@color/navigationBarColor</item>
+        <item name="android:windowLightNavigationBar">@bool/light_navigation_bar</item>
+
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple</item>
         <item name="colorPrimaryVariant">@color/purple</item>

@@ -10,24 +10,24 @@
 
     <color name="orange">#F9784B</color>
     <color name="red">#e74c3c</color>
-    <color name="purple">#6A3E88</color>
+    <color name="purple">#9965BC</color>
 
-    <!-- light theme -->
-    <color name="navigationBarColor">@color/white</color>
-    <color name="colorEdgeEffect">@color/white</color>
-    <color name="background">#f3f0f3</color>
-    <color name="card_background">@color/white</color>
-    <color name="border_color">#DDD</color>
+    <!-- dark theme -->
+    <color name="navigationBarColor">@color/black</color>
+    <color name="colorEdgeEffect">@color/black</color>
+    <color name="background">@color/black</color>
+    <color name="card_background">#252525</color>
+    <color name="border_color">#222</color>
 
-    <color name="text">#1a1a1a</color>
-    <color name="text_lighter">#333</color>
+    <color name="text">@color/white</color>
+    <color name="text_lighter">#CCC</color>
 
-    <color name="status_color">#3B66CF</color>
+    <color name="status_color">#748ECF</color>
     <color name="progress_bar_color">@color/purple</color>
 
     <!-- Chip -->
-    <color name="chip_text_color">@color/text</color>
-    <color name="checked_chip_color">@color/purple</color>
+    <color name="chip_text_color">#999</color>
+    <color name="checked_chip_color">@color/white</color>
 
     <!-- Bottom network warning -->
     <color name="offline_background">#040404</color>

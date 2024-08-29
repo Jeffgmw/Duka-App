@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.DetailsFragment"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/go_back_arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:elevation="10dp"
+        android:contentDescription="@string/go_back_arrow"
+        android:src="@drawable/ic_arrow_back"
+        app:tint="@color/text"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:elevation="5dp"
+        android:background="@color/background"
+        android:translationY="-88dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/header_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            tools:src="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop"
+            android:alpha="0.5"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/header_book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:text="A Promised Land"
+            android:textColor="@color/text"
+            android:textSize="15sp"
+            android:layout_marginBottom="16dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingStart="56dp"
+            android:paddingEnd="56dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="32dp">
+
+            <ImageView
+                android:id="@+id/book_cover_blurred"
+                android:layout_width="0dp"
+                android:layout_height="460dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/blurred_cover_description"
+                android:alpha="0.5"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                tools:background="#DDD" />
+
+            <ImageView
+                android:id="@+id/book_cover"
+                android:layout_width="140dp"
+                android:layout_height="210dp"
+                android:scaleType="centerCrop"
+                android:transitionName="details_book_cover"
+                android:contentDescription="@string/book_cover"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/book_cover_blurred"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                tools:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/book_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+
+                android:textSize="25sp"
+                android:textColor="@color/text"
+                android:ellipsize="end"
+                android:lines="1"
+                tools:text="A Promised Land"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/book_cover" />
+
+            <TextView
+                android:id="@+id/book_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+
+                android:textSize="16sp"
+                android:textColor="@color/text_lighter"
+                android:ellipsize="end"
+                android:lines="1"
+                tools:text="by Barack Obama"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/book_title" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/information_box"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/information_box_background"
+                android:layout_marginTop="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+
+                android:elevation="2dp"
+
+                app:layout_constraintTop_toBottomOf="@id/book_cover_blurred"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- rating -->
+                <TextView
+                    android:id="@+id/rating_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/text_lighter"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="@string/rating"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/price_label" />
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/text"
+                    android:textSize="15sp"
+                    tools:text="3.41"
+
+                    app:layout_constraintTop_toBottomOf="@id/rating_label"
+                    app:layout_constraintStart_toStartOf="@id/rating_label"
+                    app:layout_constraintEnd_toEndOf="@id/rating_label" />
+
+                <!-- price -->
+                <TextView
+                    android:id="@+id/price_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/text_lighter"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="@string/price"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/rating_label"
+                    app:layout_constraintEnd_toStartOf="@id/status_label" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/text"
+                    android:textSize="15sp"
+                    tools:text="$10.80"
+
+                    app:layout_constraintTop_toBottomOf="@id/price_label"
+                    app:layout_constraintStart_toStartOf="@id/price_label"
+                    app:layout_constraintEnd_toEndOf="@id/price_label" />
+
+                <!-- status -->
+                <TextView
+                    android:id="@+id/status_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/text_lighter"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="@string/status"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/price_label"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/status_color"
+                    android:textSize="15sp"
+                    tools:text="Completed"
+
+                    app:layout_constraintTop_toBottomOf="@id/status_label"
+                    app:layout_constraintStart_toStartOf="@id/status_label"
+                    app:layout_constraintEnd_toEndOf="@id/status_label" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+
+                android:textColor="@color/text_lighter"
+                android:lineHeight="24dp"
+                android:textSize="15.5sp"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac enim neque. Pellentesque at finibus sapien. Duis mauris odio, rutrum nec commodo vitae, commodo nec felis."
+                tools:targetApi="p"
+
+                app:layout_constraintTop_toBottomOf="@id/information_box"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/orange"
+        app:backgroundTint="@color/orange"
+        android:src="@drawable/ic_add"
+        app:tint="@color/white"
+        android:contentDescription="@string/fab_description"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
