@@ -3,8 +3,8 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
 
     id ("kotlin-kapt")
-//    id ("dagger.hilt.android.plugin")
-//    id ("kotlin-parcelize")
+    id ("dagger.hilt.android.plugin")
+    id ("kotlin-parcelize")
     id ("androidx.navigation.safeargs.kotlin")
 }
 
@@ -37,6 +37,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 

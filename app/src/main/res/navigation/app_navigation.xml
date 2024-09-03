@@ -32,7 +32,7 @@
         tools:layout="@layout/fragment_details" >
         <argument
             android:name="book"
-            app:argType="com.example.books.models.Book" />
+            app:argType="com.example.somalearn.models.Book" />
         <action
             android:id="@+id/action_detailsFragment_to_bottomSheetFragment"
             app:destination="@id/bottomSheetFragment" />
@@ -45,7 +45,7 @@
         tools:layout="@layout/fragment_bottom_sheet" >
         <argument
             android:name="book"
-            app:argType="com.example.books.models.Book" />
+            app:argType="com.example.somalearn.models.Book" />
         <argument
             android:name="bookStatus"
             app:argType="integer" />
